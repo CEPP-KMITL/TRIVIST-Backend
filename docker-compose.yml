@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  twint:
+      build: .
+      container_name: twint
+      environment:
+        - PYTHONUNBUFFERED=1
