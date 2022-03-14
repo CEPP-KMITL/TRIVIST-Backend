@@ -1,7 +1,7 @@
 version: '3.9'
 services:
-  twint:
+  scrape:
       build: .
-      container_name: twint
+      container_name: scrape
       environment:
         - PYTHONUNBUFFERED=1

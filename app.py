@@ -1,5 +1,6 @@
 import sched, time
-from TwintClass import TwintSearch
+# from TwintClass import TwintSearch
+from WebScrape import ThaiRSCSearch
 
 sched_object = sched.scheduler(time.time, time.sleep)
 
@@ -10,10 +11,11 @@ search_string = ["รถชน", "ไฟไหม้", "อุบัติเห
                 ]
 
 username_target = ["js100radio"]
-search_string = ["รถชน",]
+search_string = ["อุบัติเหตุ",]
 
-print("START TWINT")
-scraping = TwintSearch(sched_object, 10, username_target, search_string)
+print("START AUTO Scrape")
+# scraping = TwintSearch(sched_object, 10, username_target, search_string)
+ThaiRSCSearch(sched_object, 3600, 0, 'http://www.thairsc.com/th/', 'BigAccidentAll.aspx?l=th')
 
 sched_object.run()
 
