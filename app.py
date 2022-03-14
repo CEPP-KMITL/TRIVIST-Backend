@@ -1,6 +1,6 @@
 import sched, time
 # from TwintClass import TwintSearch
-from WebScrape import ThaiRSCSearch
+from ThaiRSCClass import ThaiRSCSearch
 
 sched_object = sched.scheduler(time.time, time.sleep)
 
@@ -18,5 +18,11 @@ print("START AUTO Scrape")
 ThaiRSCSearch(sched_object, 3600, 0, 'http://www.thairsc.com/th/', 'BigAccidentAll.aspx?l=th')
 
 sched_object.run()
+
+# Twitter ✅
+# https://live.iticfoundation.org/# ❌
+# www.thairsc.com/th/ ✅
+# longdo api ❌
+
 
 
