@@ -1,7 +1,21 @@
 version: '3.9'
 services:
+  app:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    volumes:
+      - ./server:/app/server
+    ports:
+      - 3000:3000
+
   scrape:
-      build: .
-      container_name: scrape
-      environment:
-        - PYTHONUNBUFFERED=1
+    build: 
+      context: ./Scraper
+      dockerfile: Dockerfile
+    volumes:
+      - ./Scraper:/scrape-app/Scraper
+    ports:
+      - 8000:8000
+    environment:
+      - PYTHONUNBUFFERED=1

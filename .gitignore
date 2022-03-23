@@ -1,2 +1,6 @@
+__pycache__
+
+server/node_modules
+
 chromedriver_win32
 Test
