@@ -1,0 +1,5 @@
+twint
+beautifulsoup4
+selenium==4.1.3
+joblib==1.1.0
+pandas==1.4.2

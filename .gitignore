@@ -1,6 +1,9 @@
 __pycache__
 
 server/node_modules
+scrape/*.json
 
 chromedriver_win32
 Test
+*.env
+file.txt
