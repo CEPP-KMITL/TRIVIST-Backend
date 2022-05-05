@@ -26,7 +26,8 @@ services:
     networks:
       - backend_nw
     volumes:
-      - ./server/:/app
+      - ./server/:/server
+      - ./scrape/data/:/server/data
     ports:
       - "3000:3000"
 
@@ -47,7 +48,7 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
       - REMOTE_SELENIUM_URL=http://selenium:4444
-
+    command: 'python app.py'
 networks:
   backend_nw:
     name: services_network
